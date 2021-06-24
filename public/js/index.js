@@ -85,20 +85,20 @@ bar.addEventListener("click", function () {
 
 // === WELCOME ANIMATION ===//
 
-// section1.style.display = "none";
+section1.style.display = "none";
 
-// setTimeout(() => {
-//     welcome.style.width = "0%";
-//     menu.classList.remove("yes");
-//     blink.style.display = "none";
-//     welcome1.style.display = "none";
-//     welcome2.style.display = "none";
-// }, 2000);
+setTimeout(() => {
+    welcome.style.width = "0%";
+    menu.classList.remove("yes");
+    blink.style.display = "none";
+    welcome1.style.display = "none";
+    welcome2.style.display = "none";
+}, 2000);
 
-// setTimeout(() => {
-//     welcome.style.display = "none";
-//     section1.style.display = "flex";
-// }, 3000);
+setTimeout(() => {
+    welcome.style.display = "none";
+    section1.style.display = "flex";
+}, 3000);
 
 let query = window.matchMedia("(max-width:1050px)");
 let query2 = window.matchMedia("(min-width:577px)");

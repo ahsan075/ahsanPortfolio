@@ -1,0 +1,377 @@
+/* ========== SECTION 1 ========== */
+
+.main_header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.main_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_header_left {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main_header_right {
+    height: 90vh;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    object-fit: cover;
+    align-self: flex-end;
+    animation: right 0.8s;
+}
+
+@keyframes right {
+    from {
+        margin-right: -100vw;
+        transition: 0.5s;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+.heading {
+    animation: left 0.8s;
+}
+@keyframes left {
+    from {
+        margin-left: -100vw;
+        transition: 0.5s;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+.name {
+    animation: top 0.5s;
+}
+
+@keyframes top {
+    from {
+        margin-top: -100vh;
+        transition: 0.5s;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+.bg1 {
+    animation: opacity 0.8s;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main_header_right img {
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ====== HEADING TAG 1 ====== */
+
+.bg1 {
+    position: absolute;
+    font-size: 11vw;
+    top: 5%;
+    text-align: center;
+    color: #ffffffcc;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.123);
+    z-index: -1;
+    cursor: pointer;
+}
+
+/* ====== HEADING TAG 2 ====== */
+
+/* ====== IMAGE TAG ====== */
+
+/* ====== DIV TAG ====== */
+
+.mainText {
+    position: relative;
+    margin-bottom: 150px;
+    /* z-index: 1; */
+}
+
+/* === HEADING 1 === */
+
+.name {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: rgb(105, 105, 105);
+    margin-bottom: 1%;
+}
+
+/* === HEADING 2 === */
+
+.heading {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    font-family: sans-serif;
+    font-weight: 800;
+    margin-bottom: 2%;
+}
+
+/* === PARAGRAPH === */
+
+.para1 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #878a8f;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+
+/* === ANCHOR TAGS === */
+
+.tags {
+    max-width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.a1,
+.a2 {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.anchr1,
+.anchr2 {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.anchr1::before,
+.anchr2::before {
+    content: "";
+    position: absolute;
+    background: #000;
+    height: 2px;
+    width: 100%;
+    left: -100%;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.anchr1:hover,
+.anchr2:hover {
+    color: #000;
+}
+
+/* === ANCHOR TAGS HOVER EFFECT === */
+
+.anchr1:hover.anchr1::before,
+.anchr2:hover.anchr2::before {
+    left: 0;
+}
+
+/* = OR SPAN = */
+
+/*=== Responsive Design ===*/
+
+@media only screen and (max-width: 2100px) {
+    .tags {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+    /* ====== IMAGE TAG ====== */
+
+    /* ====== DIV TAG ====== */
+
+    /* === HEADING 2 === */
+
+    .heading {
+        font-size: 3.7rem;
+    }
+
+    /* === PARAGRAPH === */
+
+    .para1 {
+        font-size: 1.25rem;
+    }
+    .tags {
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 1550px) {
+    .tags {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1292px) {
+    .bg1 {
+        top: 10%;
+        font-size: 15vw;
+    }
+
+    .main_header {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1228px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .para1 {
+        font-size: 1.2rem;
+    }
+    .bg1 {
+        top: 13%;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .bg1 {
+        font-size: 15vw;
+    }
+    .tags {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .heading {
+        line-height: 4rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .mainText {
+        margin-bottom: 80px;
+    }
+    .tags {
+        max-width: 100%;
+    }
+    .main_header {
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+        font-weight: 700;
+    }
+
+    .name {
+        animation: top 0.5s;
+        margin-top: 0 !important;
+    }
+
+    /* === PARAGRAPH === */
+
+    .para1 {
+        font-size: 1.1rem;
+    }
+
+    /* ====== IMAGE TAG ====== */
+}
+
+@media only screen and (max-width: 646px) {
+    /* ====== IMAGE TAG ====== */
+}
+
+@media only screen and (max-width: 576px) {
+    .main_header {
+        align-items: flex-end;
+    }
+    .main_row {
+        flex-direction: column-reverse;
+    }
+    .main_header_right {
+        height: 50vh;
+        align-self: center;
+    }
+    .main_header_left {
+        height: 40vh;
+    }
+    .bg1 {
+        top: 5%;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .main_header_right img {
+        object-fit: cover;
+    }
+    .main_header_left {
+        height: fit-content;
+    }
+    .mainText {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 332px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .para1 {
+        font-size: 1rem;
+    }
+    .name {
+        font-size: 0.8rem;
+    }
+    .anchr1,
+    .anchr2 {
+        font-size: 0.9rem;
+    }
+    .anchr2::before,
+    .anchr1::before {
+        width: 82%;
+    }
+    .mainText {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 240px) {
+    .tags {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .a1 {
+        margin-bottom: 10px;
+    }
+}

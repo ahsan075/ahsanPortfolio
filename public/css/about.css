@@ -1,0 +1,356 @@
+.aboutSection {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.about_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Hello Section */
+
+.dsc {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+}
+
+.dsc h4 {
+    font-weight: 600;
+}
+
+.dsc p {
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.dsc > p span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#about {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    padding-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+}
+#about::before {
+    content: "";
+    position: absolute;
+    background: #000;
+    height: 4px;
+    width: 100%;
+    left: -100%;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+#about:hover#about::before {
+    left: 0%;
+}
+
+.intro {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dsc2 {
+    width: 55%;
+}
+
+.aboutText {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-bottom: 50px;
+}
+.count,
+.countName {
+    text-align: center;
+}
+
+.count {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.countName {
+    letter-spacing: 1px;
+}
+
+.counting {
+    margin-bottom: 60px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons span {
+    position: relative;
+    padding: 15px 11px;
+    outline: none;
+    box-shadow: 0 1px 2px -1px gray;
+    overflow: hidden;
+}
+.buttons span a {
+    color: rgb(61, 59, 59);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.cv::before {
+    content: "";
+    background: #4e41ac;
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    border-radius: 50%;
+    top: -25%;
+    left: -180%;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.cv:hover.cv::before {
+    left: -50%;
+}
+.cv:hover > a {
+    color: white;
+}
+
+.divText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.countdiv {
+    box-shadow: 0 1px 5px -1px #4e41acbf;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.count {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.count::before {
+    content: "hover";
+    background: #4e41ac;
+    position: absolute;
+    width: 100%;
+    letter-spacing: 1px;
+    height: 100%;
+    left: -170%;
+    font-size: 15px;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.countdiv:hover .count::before {
+    left: 0;
+    content: "";
+}
+
+.countName {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.counting .col-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.countdiv:hover {
+    box-shadow: 0 1px 10px -1px #4e41acc6;
+}
+
+.aboutdivide {
+    position: absolute;
+    display: flex;
+    top: 30%;
+    margin: 0 150px;
+}
+
+@media only screen and (max-width: 1780px) {
+    .aboutdivide {
+        margin: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 1525px) {
+    .countdiv {
+        width: 170px;
+    }
+    .count {
+        width: 40px;
+        height: 40px;
+    }
+    .count::before {
+        left: -200%;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1278px) {
+    .aboutdivide {
+        flex-direction: column;
+    }
+    .dsc {
+        width: 100%;
+    }
+    .dsc2 {
+        width: 100%;
+    }
+    .countdiv {
+        width: 200px;
+    }
+    .count {
+        width: 60px;
+        height: 60px;
+    }
+    .count::before {
+        left: -170%;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .countdiv {
+        width: 170px;
+    }
+    .count {
+        width: 50px;
+        height: 50px;
+    }
+    .count::before {
+        left: -190%;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .count::before {
+        left: 0;
+        content: "";
+    }
+    .aboutdivide {
+        top: 28%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .countdiv {
+        max-width: 140px;
+    }
+    .aboutdivide {
+        margin: 0;
+        top: 25%;
+    }
+    .count {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .dsc h4 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .dsc p {
+        font-size: 18px;
+        line-height: 1.8rem;
+    }
+
+    .dsc > p span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #about {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .intro {
+        top: 15%;
+    }
+    .countName {
+        font-size: 13px;
+    }
+    .count {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .dsc {
+        padding: 0 10px;
+    }
+    .dsc h4 {
+        font-size: 18px;
+    }
+
+    .dsc p {
+        font-size: 16px;
+    }
+
+    .dsc > p span {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 362px) {
+    .buttons span {
+        padding: 9px 5px;
+    }
+    .buttons span a {
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+
+    .cv::before {
+        content: "";
+        background: #4e41ac;
+    }
+    .cv:hover.cv::before {
+        left: -50%;
+    }
+}

@@ -13,7 +13,7 @@ let welcome = document.querySelector(".welcome");
 let blink = document.querySelector(".blink");
 let welcome1 = document.querySelector(".welcome1");
 let welcome2 = document.querySelector(".welcome2");
-let sectionAbout = document.querySelector(".sectionAbout");
+let sectionAbout = document.querySelector(".aboutSection");
 let image = document.querySelector(".fig");
 let section1 = document.querySelector(".main_header");
 let section2 = document.querySelector(".section2");
@@ -86,6 +86,7 @@ bar.addEventListener("click", function () {
 // === WELCOME ANIMATION ===//
 
 section1.style.display = "none";
+sectionAbout.style.display = "none";
 
 setTimeout(() => {
     welcome.style.width = "0%";
@@ -98,6 +99,7 @@ setTimeout(() => {
 setTimeout(() => {
     welcome.style.display = "none";
     section1.style.display = "flex";
+    sectionAbout.style.display = "flex";
 }, 3000);
 
 let query = window.matchMedia("(max-width:1050px)");

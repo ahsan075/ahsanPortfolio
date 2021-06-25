@@ -20,27 +20,6 @@ let section2 = document.querySelector(".section2");
 let card = document.querySelectorAll(".card");
 let skillHeading = document.querySelector(".skillHeading");
 let skillh1 = document.querySelector("#skill-h1");
-
-let zindex = document.querySelector(".mainText");
-
-let circle1 = document.querySelector(
-    ".card:nth-child(1) .percent svg circle:nth-child(2)"
-);
-let circle2 = document.querySelector(
-    ".card:nth-child(2) .percent svg circle:nth-child(2)"
-);
-let circle3 = document.querySelector(
-    ".card:nth-child(3) .percent svg circle:nth-child(2)"
-);
-let circle4 = document.querySelector(
-    ".card:nth-child(4) .percent svg circle:nth-child(2)"
-);
-let circle5 = document.querySelector(
-    ".card:nth-child(5) .percent svg circle:nth-child(2)"
-);
-let circle6 = document.querySelector(
-    ".card:nth-child(6) .percent svg circle:nth-child(2)"
-);
 let result = false;
 let aboutbox = document.querySelector(".aboutBox");
 let box1 = document.querySelector(".box1");
@@ -128,4 +107,23 @@ window.addEventListener("resize", function (e) {
     } else {
         insert.innerHTML = template("images/croped.png");
     }
+});
+
+//=== Scroll Function ===//
+
+const aboutbottom = document.getElementById("about");
+
+window.addEventListener("scroll", function () {
+    let screenPosition = window.innerHeight / 1.7;
+    let contentPosition = sectionAbout.getBoundingClientRect().top;
+
+    if (section1.classList.contains("scrollon")) {
+        section1.style.opacity = 1 - +window.pageYOffset / 500 + "";
+        section1.style.top = +window.pageYOffset / 2 + "px";
+        section1.style.backgroundPositionY = -+window.pageYOffset + "px";
+    }
+    aboutbottom.classList.toggle(
+        "aboutbottom",
+        contentPosition < screenPosition
+    );
 });

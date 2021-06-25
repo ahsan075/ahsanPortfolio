@@ -33,13 +33,14 @@
 }
 
 .dsc p {
-    letter-spacing: 2px;
-    word-spacing: 2px;
+    word-spacing: 1px;
+    color: rgb(105, 105, 105);
 }
 
 .dsc > p span {
     font-size: 24px;
     font-weight: 600;
+    color: #000;
 }
 
 #about {
@@ -62,12 +63,16 @@
     width: 100%;
     left: -100%;
     bottom: 0;
-    transition: 0.5s;
+    transition: 1s ease-in-out;
 }
 
-#about:hover#about::before {
-    left: 0%;
+.aboutbottom#about::before {
+    left: 0% !important;
 }
+
+/* #about:hover#about::before {
+    left: 0%;
+} */
 
 .intro {
     position: absolute;
@@ -334,6 +339,72 @@
 
     .dsc > p span {
         font-size: 16px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .aboutSection {
+        height: 100%;
+        width: 100vw;
+    }
+    .aboutdivide {
+        top: 22%;
+    }
+    #about {
+        font-size: 24px;
+        padding-bottom: 7px;
+    }
+    .intro {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    #about::before {
+        height: 3px;
+    }
+    .dsc {
+        padding: 0 12px;
+    }
+    .dsc h4 {
+        font-size: 17px;
+    }
+
+    .dsc p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .dsc > p span {
+        font-size: 17px;
+    }
+    .divText {
+        margin: 20px 10px;
+    }
+    .counting {
+        margin-bottom: 40px;
+    }
+    .count {
+        font-size: 16px;
+    }
+    .countName {
+        font-size: 12px;
+    }
+    .count {
+        width: 35px;
+        height: 35px;
+    }
+    .countName {
+        margin-top: 5px;
+    }
+    .countdiv {
+        box-shadow: none;
+    }
+    .cv::before {
+        left: -50%;
+    }
+    .cv > a {
+        color: white !important;
+    }
+    .buttons {
+        margin-bottom: 20px;
     }
 }
 
